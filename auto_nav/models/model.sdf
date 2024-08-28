@@ -1,0 +1,22 @@
+<sensor name = "lidar" type="ray">
+    <ray>
+        <scan>
+            <horizontal>
+                <samples> 360 </samples>
+                <min_angle> 0.0000000 </min_angle>
+                <max_angle> 6.2800000 </max_angle>
+            </horizontal>
+
+
+        </scan>
+
+
+        <range>
+            <min>0.120000</min>
+            <max>3.5</max>
+            <resolution>0.015000</resolution>
+        </range>
+
+
+
+    </ray>

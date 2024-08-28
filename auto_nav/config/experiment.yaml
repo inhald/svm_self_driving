@@ -1,0 +1,18 @@
+experiment:
+  ros__parameters:
+
+    wheelbase: 0.287
+
+
+    max_accel: 2.5
+    max_steering_vel: 3.2
+
+
+  #ackermann to vesc
+    speed_to_erpm_gain: 3182.18
+    speed_to_erpm_gain: 0.0
+    steering_angle_to_servo_gain: -1.0647
+    steering_angle_to_servo_offset: 0.500
+
+
+    driver_smoother_rate: 75.0

@@ -1,0 +1,113 @@
+/navigation:
+  ros__parameters:
+    wheelbase: 0.287 # meters
+
+
+    #cv params
+    # Camera parameters
+    min_cv_range: 0.3 # meters
+    max_cv_range: 3.0 # meters
+    num_cv_sample_rows: 350
+    num_cv_sample_cols: 600
+
+    cv_lidar_range_max_diff: 20.0 # meters; @TODO: tune this or ignore it
+    camera_height: 0.15 #0.144 # meters; @TODO: use altitude measured by IMU
+    cv_real_to_theo_ground_range_ratio: 0.8
+    cv_real_to_theo_ground_range_ratio_near_horizon: 0.7
+    cv_ground_range_decay_row: 285.0 # measured from experiment
+    cv_pitch_angle_hardcoded: 0.0349 #rad(2.0/180*pi) # radians; pitch angle offset for camera; 0 angle is horizontal, positive direction is going down
+    cv_ground_angle: 0.0 #rad(0/180*pi) # radians; angle below which we validate points with ground distances; 0 angle is horizontal, positive direction is going down
+
+    # The distance from the center of the
+    # rear axis (base_link) to the camera
+    cv_distance_to_lidar: 0.27017 # meters
+
+
+
+    #topics
+    depth_image_topic: "/camera/depth/image_rect_raw"
+    depth_info_topic: "/camera/depth/camera_info"
+    cv_ranges_topic: "/depth_image"
+    depth_index_topic: "/depth_index"
+    depth_points_topic: "/depth_points"
+    scan_topic: "/scan"
+    odom_topic: "/odom"
+    imu_topic: "/imu"
+    mux_topic: "/mux"
+
+
+
+    #lidar simulation
+    scan_beams: 1078
+    scan_field_of_view: 6.2831853 #4.71 # radians
+    scan_range: 12.0
+
+
+
+    #obstacle point detection
+    angle_bl: 4.71238
+    # angle_bl: -1.57079
+
+    angle_al: 3.2289
+    # angle_al: -3.0592
+    # angle_br: 1.57079
+    angle_br: 1.57079
+    angle_ar: 3.05432
+
+    
+    n_pts_l: 100
+    n_pts_r: 100
+
+    #Speed & Steering Controller
+    max_steering_angle: 0.4189
+    tau: 0.1
+    k_d: 4.7
+    k_p: 4.1
+    vehicle_velocity: 2.5
+    turn_velocity: 0.8
+    velocity_zero: 0.3
+
+
+    stop_distance: 0.4 #m
+    stop_distance_decay: 1.5 #m
+
+    
+
+
+
+    #Gap Following Algorithm
+    CenterOffset: 0.0
+    DistanceLeft: 0.9
+    DistanceRight: 0.9
+    safe_distance: 2.0
+    # right_beam_angle: 1.57079
+    left_beam_angle: 4.71238
+    right_beam_angle: 1.57079
+    # left_beam_angle: -1.57079
+    heading_beam_angle: 0.1963495
+    stop_time1: 1.0
+    stop_time2: 1.0
+
+
+    qos_overrides:
+      'chatter':
+        publisher:
+          reliability: reliable
+          history_depth: 100
+          history: keep_last
+    
+
+
+    #Speed Control Parameters
+    stop_distance: 0.4
+    stop_distance_decay: 1.5
+
+    #Obstacle Parameters
+
+    obstacle_size: 2
+
+
+    #Separating Barrier Line Optimization Mode
+    optim_mode: 1
+    max_lidar_range_opt: 5.0
+    use_camera: 1
