@@ -6,7 +6,7 @@ This project implements a ROS 2-based autonomous navigation system that fuses po
 
 ## Sensor Fusion Pipeline
 
-The system merges spatial data from both the RPLIDAR and RealSense camera into a unified point cloud. It applies preprocessing (filtering, downsampling, frame transforms), then extracts obstacle boundaries using a linear approximation of the maximum-margin separator (SVM-inspired). The output is a virtual barrier that defines the safe traversal corridor for the robot.
+The system merges spatial data from both the RPLIDAR and RealSense camera into a unified point cloud. It applies preprocessing  then extracts obstacle boundaries using the solution to an optimization problem. The output is a virtual barrier that defines the safe traversal corridor for the robot.
 
 **Key components of the pipeline include:**
 
