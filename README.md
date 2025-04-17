@@ -19,6 +19,7 @@ To run the full system:
 
 ```bash
 ros2 launch auto_nav nav_launch.py
+```
 
 ## Demo
 > **Note**: The GIF may take a moment to load on GitHub.
