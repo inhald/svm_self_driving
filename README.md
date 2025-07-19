@@ -51,14 +51,14 @@ This yields a fused 1D scan that captures obstacles both above and below the LiD
   - Define left (α<sub>l</sub>, β<sub>l</sub>) and right (α<sub>r</sub>, β<sub>r</sub>) sectors  
 - **Optimization**  
   Solve:
-  $$
-    \begin{aligned}
-      \min_{w,b}\ &\tfrac12\,\|w\|^2 \\[4pt]
-      \text{s.t.}\quad
-        &w^\top p_i + b \ge 1,\quad \forall p_i \in \mathcal{P}_\text{left},\\
-        &w^\top p_j + b \le -1,\quad \forall p_j \in \mathcal{P}_\text{right}.
-    \end{aligned}
-  $$
+  ```math
+   \begin{aligned}
+   \min_{w,b}\ &\frac{1}{2}\|w\|^2 \\[6pt]
+   \text{s.t.}\quad
+   & w^\top p_i + b \ge 1, && \forall\,p_i \in \mathcal{P}_{\mathrm{left}},\\
+   & w^\top p_j + b \le -1, && \forall\,p_j \in \mathcal{P}_{\mathrm{right}}.
+   \end{aligned}
+  ```
   This maximizes the margin (sum of left/right distances) between the two obstacle sets
 - **Finite‑State Machine**  
   - **Normal:** drive forward, steer to maximize clearance (PD on *d<sub>lr</sub>*)  
