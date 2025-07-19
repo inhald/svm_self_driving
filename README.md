@@ -93,8 +93,8 @@ This yields a fused 1D scan that captures obstacles both above and below the LiD
 
 2. To run the full system:
 
-bash
-ros2 launch auto_nav nav_launch.py
+```bash
+   ros2 launch auto_nav nav_launch.py
    
 ## Demo
 > **Note**: The GIF may take a moment to load on GitHub.
