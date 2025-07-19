@@ -81,7 +81,7 @@ This yields a fused 1D scan that captures obstacles both above and below the LiD
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Install dependencies**
    ```bash
@@ -91,3 +91,11 @@ This yields a fused 1D scan that captures obstacles both above and below the LiD
      ros-foxy-ackermann-msgs \
      ros-foxy-rplidar-ros
 
+2. To run the full system:
+
+bash
+ros2 launch auto_nav nav_launch.py
+   
+## Demo
+> **Note**: The GIF may take a moment to load on GitHub.
+![Demo](https://github.com/inhald/svm_self_driving/blob/main/optimized-compression.gif)
