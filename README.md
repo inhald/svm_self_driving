@@ -52,12 +52,14 @@ This yields a fused 1D scan that captures obstacles both above and below the LiD
 - **Optimization**  
   Solve:
   $$
-    \min_{w} \tfrac12\,w^T w
-    \quad\text{s.t.}\quad
-    w^T p_i + b - 1 \ge 0,\;
-    w^T p_j + b + 1 \le 0
+    \begin{aligned}
+      \min_{w,b}\ &\tfrac12\,\|w\|^2 \\[4pt]
+      \text{s.t.}\quad
+        &w^\top p_i + b \ge 1,\quad \forall p_i \in \mathcal{P}_\text{left},\\
+        &w^\top p_j + b \le -1,\quad \forall p_j \in \mathcal{P}_\text{right}.
+    \end{aligned}
   $$
-  to maximize sum of left/right distances :contentReference[oaicite:5]{index=5}  
+  This maximizes the margin (sum of left/right distances) between the two obstacle sets
 - **Finite‑State Machine**  
   - **Normal:** drive forward, steer to maximize clearance (PD on *d<sub>lr</sub>*)  
   - **Backup:** reverse when blocked  
