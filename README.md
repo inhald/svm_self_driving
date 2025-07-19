@@ -99,5 +99,4 @@ This yields a fused 1D scan that captures obstacles both above and below the LiD
    ros2 launch auto_nav nav_launch.py
    
 ## Demo
-> **Note**: The GIF may take a moment to load on GitHub.
-![Demo](/images/Self_Driving_RC_Car.gif)
+![Demo](Self_Driving_RC_Car.gif)
