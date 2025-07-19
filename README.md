@@ -100,4 +100,4 @@ This yields a fused 1D scan that captures obstacles both above and below the LiD
    
 ## Demo
 > **Note**: The GIF may take a moment to load on GitHub.
-![Demo](https://github.com/inhald/svm_self_driving/blob/main/images/optimized-compression.gif)
+![Demo](https://github.com/inhald/svm_self_driving/blob/main/optimized-compression.gif)
